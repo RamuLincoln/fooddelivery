@@ -4,8 +4,19 @@ import './App.css';
 import Header from './Components/Header';
 import Maincontainer from './Components/Maincontainer';
 import MenuContainer from './Components/MenuContainer';
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect(()=>{
+    const menuli = document.querySelectorAll('#menu li')
+    
+    function setactive() {
+      menuli.forEach((n)=>n.classList.remove("active"))
+      this.classList.add("active");
+    }
+    menuli.forEach((n) => n.addEventListener('click',setactive))
+  },[])
   return (
     <div className="App">
       {/* Header section */}
