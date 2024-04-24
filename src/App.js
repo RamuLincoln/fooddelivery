@@ -5,6 +5,8 @@ import Header from './Components/Header';
 import Maincontainer from './Components/Maincontainer';
 import MenuContainer from './Components/MenuContainer';
 import { useEffect } from 'react';
+import BannerName from './Components/BannerName';
+import delivery from './Images/eat.avif';
 
 function App() {
 
@@ -23,7 +25,12 @@ function App() {
       <Header />
       {/* Main container */}
       <main>
-        <div className="mainContainer"></div>
+        <div className="mainContainer">
+          <div className="banner">
+            <BannerName name={'Ram'} discount={"20"} link={'#'} />
+            <img src={delivery} alt='' className='deliveryPic' />
+          </div>
+        </div>
         <div className="rightMenu"></div>
       </main>
       {/* Bottom Menu */}
