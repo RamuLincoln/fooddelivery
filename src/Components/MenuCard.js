@@ -3,7 +3,7 @@ import React from 'react'
 
 function MenuCard({image, name, isActive}) {
   return (
-    <div className='rowMenuCard' >
+    <div className={`rowMenuCard ${isActive ? `active` : ``}`} >
         <div className="imgBox">
             <img src={image} alt='' />
         </div>
